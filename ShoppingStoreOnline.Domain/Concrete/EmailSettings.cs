@@ -12,7 +12,7 @@ namespace ShoppingStoreOnline.Domain.Concrete
         public string MailFromAddress = "sancristobal.soporte@gmail.com";
         public bool UseSsl = true;
         public string Username = "sancristobal.soporte@gmail.com";
-        public string Password = "mic032013";
+        public string Password = "shmwaoodzlozfpis";
         public string ServerName = "smtp.gmail.com";
         public int ServerPort = 587;
     }
