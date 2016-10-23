@@ -69,7 +69,19 @@
         <div id="page-content-wrapper">
             <div class="container-fluid xyz">
                 @if (TempData["message"] != null)
-            { <div class="alert alert-success">@TempData["message"]</div>}
+                { 
+                    <div class="alert alert-success">@TempData["message"]</div>
+                }
+                @{
+                    var userName = HttpContext.Current.User.Identity.Name;
+                    if (userName != "")
+                    {
+                        <h3>@Html.ActionLink("ShoppingStoreOnline", "List", "Product")<span class="btn-warning btn pull-right">
+                            @Html.ActionLink(HttpContext.Current.User.Identity.Name + " - Logout", "Logout", "Account")
+                            </span>
+                        </h3>                        
+                    }
+                }
                 <div class="row">
                     <div class="col-lg-12">
 

@@ -47,5 +47,14 @@ namespace ShoppingStoreOnline.WebUI.Controllers
                 return View();
             }
         }
+
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+
+            return RedirectToAction("Index", "Admin");
+        }
+        //Change Password
+        //Forget Password
     }
 }
